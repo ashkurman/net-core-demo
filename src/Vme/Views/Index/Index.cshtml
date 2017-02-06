@@ -1,0 +1,67 @@
+﻿@model Vme.Backend.Model.IndexViewSettings
+@inject IJsonHelper Json
+
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>title</title>
+	<link rel="stylesheet" type="text/css" href="~/styles/main.css">
+	<script type="text/javascript" src="scripts/require.js"></script>
+	<script>
+		require.config({
+			baseUrl: "scripts/",
+			paths: {
+				"app": "tsbundle",
+				"jquery": "jquery",
+				"signalr": "signalr",
+				"signalr.hubs": "@Url.Content("~/api/hubs")?"
+			},
+			shim: {
+				"jquery": {
+					exports: "$"
+				},
+				"signalr": {
+					deps: ["jquery"],
+					exports: "$.connection"
+				},
+				"signalr.hubs": {
+					deps: ["signalr"]
+				}
+			}
+		});
+		require( ["app", "signalr.hubs"],
+			function(MyApp) {
+				console.log('Starting application...');
+				var app = new MyApp.App();
+				app.lastFmEnabled = @Json.Serialize( Model.LastFmEnabled );
+				app.Run()
+					.catch( reason => console.error('Unexpected error: ' + reason) );
+			}
+		);
+	</script>
+</head>
+<body>
+	<ul id="navbar" class="navbar"
+		@if(!Model.LastFmEnabled)
+		{
+			@:hidden=""
+		} >
+		<li class="navbar__block"><div class="navbar__header"><header>Search:</header></div></li>
+		<li class="navbar__block"><div class="navbar__spacer"></div></li>
+		<li class="navbar__block"><div class="navbar__search"><input placeholder="Enter name of an artist here" data-bind="value: searchString" /></div></li>
+	</ul>
+	<ul id="navbar-noapi" class="navbar"
+		@if(Model.LastFmEnabled)
+		{
+			@:hidden=""
+		} >
+		<li class="navbar__block"><div class="navbar__text"><header>Running in demo mode, because Last.fm API key is not specified in server settings.</header></div></li>
+	</ul>
+	<div id="screen"></div>
+</body>
+</html>

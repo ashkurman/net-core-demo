@@ -1,0 +1,11 @@
+{
+	"version":  "2.1",
+	"extends": "tsconfig.json",
+	"inclide": [
+		"**/*.spec.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"wwwroot"
+	]
+}

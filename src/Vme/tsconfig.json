@@ -1,0 +1,27 @@
+{
+	"version":  "2.1" ,
+	"compilerOptions": {
+		"baseUrl": "./frontend/",
+		"rootDir": "./frontend/",
+		"module": "amd",
+		"moduleResolution": "node",
+		"outFile": "tsbundle.js",
+		"outDir": "./wwwroot/scripts/",
+		"watch": true,
+		"strictNullChecks": true,
+		"noImplicitAny": false,
+		"noEmitOnError": true,
+		"removeComments": false,
+		"sourceMap": true,
+		"target": "es2015",
+
+		"paths": {
+			"src/*": [ "./*", "model/*" ]
+		}
+	},
+	"exclude": [
+		"node_modules",
+		"wwwroot",
+		"**/*.spec.ts"
+	]
+}

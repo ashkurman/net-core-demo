@@ -1,0 +1,64 @@
+{
+	"dependencies": {
+		"Common.Logging": "3.4.0-Beta2",
+		"Gray.Microsoft.AspNetCore.SignalR.Server": "0.2.0-alpha1",
+		"Inflatable.Lastfm": "1.0.0.294",
+		"JetBrains.Annotations": "10.2.1",
+		"Microsoft.AspNetCore.Diagnostics": "1.1.0",
+		"Microsoft.AspNetCore.Mvc": "1.1.0",
+		"Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+		"Microsoft.AspNetCore.StaticFiles": "1.1.0",
+		"Microsoft.AspNetCore.WebSockets": "1.0.0",
+		"Microsoft.Extensions.Configuration.Binder": "1.1.0",
+		"Microsoft.Extensions.Configuration.CommandLine": "1.1.0",
+		"Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+		"Microsoft.Extensions.Configuration.Json": "1.1.0",
+		"Microsoft.Extensions.Logging.Console": "1.1.0",
+		"Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
+		"Microsoft.NETCore.App": {
+			"type": "platform",
+			"version": "1.1.0"
+		},
+		"Newtonsoft.Json": "9.0.1",
+		"System.Linq": "4.3.0",
+		"YamlDotNet.NetStandard": "4.0.0"
+	},
+
+	"tools": {},
+
+	"frameworks": {
+			"netcoreapp1.1": {
+				"imports": "portable-net451+win81"
+			}
+	},
+
+	"buildOptions": {
+		"emitEntryPoint": true,
+		"preserveCompilationContext": true,
+		"copyToOutput": {
+			"include": [ "wwwroot", "Views" ],
+			"includeFiles": ["settings.json", "hosting.json"]
+		}
+
+	},
+
+	"runtimeOptions": {
+		"configProperties": {
+			"System.GC.Server": true
+		}
+	},
+
+	"publishOptions": {
+			"include": [
+				"wwwroot",
+				"web.config",
+				"Views/**/*.cshtml",
+				"settings.json",
+				"hosting.json"
+			]
+	},
+
+	"scripts": {
+		"precompile": "gulp"
+	}
+}

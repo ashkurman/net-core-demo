@@ -1,0 +1,38 @@
+{
+	"similarartists":{
+		"artist":
+		[
+			{
+				"name":"Sonny & Cher",
+				"mbid":"c43d2302-02db-487b-b62d-8cb3c57f94c6",
+				"match":"1",
+				"url":"https://www.last.fm/music/Sonny+&+Cher",
+				"image":[
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/34s/c8c4811ce8d14ea382fc7980aff59b92.png","size":"small"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/64s/c8c4811ce8d14ea382fc7980aff59b92.png","size":"medium"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/174s/c8c4811ce8d14ea382fc7980aff59b92.png","size":"large"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/300x300/c8c4811ce8d14ea382fc7980aff59b92.png","size":"extralarge"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/c8c4811ce8d14ea382fc7980aff59b92.png","size":"mega"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/arQ/c8c4811ce8d14ea382fc7980aff59b92.png","size":""}
+				],
+				"streamable":"0"
+			},
+			{
+				"name":"Madonna",
+				"mbid":"79239441-bfd5-4981-a70c-55c3f15c1287",
+				"match":"0.961655",
+				"url":"https://www.last.fm/music/Madonna",
+				"image":[
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/34s/9299f892dd234b03cbce8be55ff31ed0.png","size":"small"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/64s/9299f892dd234b03cbce8be55ff31ed0.png","size":"medium"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/174s/9299f892dd234b03cbce8be55ff31ed0.png","size":"large"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/300x300/9299f892dd234b03cbce8be55ff31ed0.png","size":"extralarge"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/9299f892dd234b03cbce8be55ff31ed0.png","size":"mega"},
+					{"#text":"https://lastfm-img2.akamaized.net/i/u/arQ/9299f892dd234b03cbce8be55ff31ed0.png","size":""}
+				],
+				"streamable":"0"
+			}
+		]
+	}
+	"@attr":{"artist":"Cher"}
+}
